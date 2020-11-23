@@ -1,21 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { AppLoading } from 'expo';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, TouchableHighlight } from 'react-native';
-import { Orbitron_400Regular, useFonts } from '@expo-google-fonts/orbitron';
-
-export default function App() {
-  const [fontsLoaded] = useFonts({
-    Orbitron_400Regular
-  })
 
 
-  const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff'
-      // alignItems: 'center',
-      // justifyContent: 'center', // eixo y
+      backgroundColor: '#fff',
     },
   
     mainTitle: {
@@ -72,7 +62,6 @@ export default function App() {
       justifyContent: 'space-evenly',
       flexDirection: 'row',
       fontSize: 13,
-      //height: '50px',    
       alignItems: 'center'
     },
   
