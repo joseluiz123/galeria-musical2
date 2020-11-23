@@ -73,7 +73,7 @@ const estilos = StyleSheet.create(
       paddingTop: 2,
       paddingBottom: 8,
       alignSelf: 'center', 
-    },
+    }, 
 
     imagem:{
       width: 210,
