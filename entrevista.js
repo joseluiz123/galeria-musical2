@@ -122,8 +122,8 @@ const Entrevista = ({ navigation }) => {
                 <Text style={estilos.textoBotao}>Início</Text>          
             </TouchableHighlight>
 
-            <TouchableHighlight underlayColor="orange" onPress={() => navigation.popToTop()}>            
-                <Text style={estilos.textoBotao}>Lançamentos</Text>                      
+            <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Discografias')}>            
+                <Text style={estilos.textoBotao}>Discografias</Text>                      
             </TouchableHighlight>
 
             <TouchableHighlight underlayColor="orange" onPress={() => navigation.popToTop()}>        
