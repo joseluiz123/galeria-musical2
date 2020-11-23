@@ -83,8 +83,7 @@ const estilos = StyleSheet.create(
 
     logo:{
       width: 300,
-      height: 60,
-     // alignSelf: 'center',      
+      height: 60,     
     },
 
     textoBotao: {
