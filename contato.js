@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, ScrollView, Button, StyleSheet, Text, TextInput, TouchableHighlight, TouchableOpacity, Image } from 'react-native';
 
-
 const estilos = StyleSheet.create(
   {
    container: {
