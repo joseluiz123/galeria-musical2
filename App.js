@@ -7,6 +7,8 @@ import './contato';
 import Contato from './contato';
 import './entrevista';
 import Entrevista from './entrevista';
+import './discografias';
+import Discografias from './discografias';
 
 
 const estilos = StyleSheet.create(
@@ -116,8 +118,8 @@ function TelaInicial({ navigation }) {
 
         <View style={estilos.menu}>
             
-            <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Contato')}>            
-                <Text style={estilos.textoBotao}>Lançamentos</Text>                      
+            <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Discografias')}>            
+                <Text style={estilos.textoBotao}>Discografias</Text>                      
             </TouchableHighlight>
 
             <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Entrevista')}>        
@@ -212,6 +214,8 @@ function TelaInicial({ navigation }) {
           <Stack.Screen name="Contato" component={Contato} />
 
           <Stack.Screen name="Entrevista" component={Entrevista} />
+
+          <Stack.Screen name="Discografias" component={Discografias} />
         </Stack.Navigator>
       </NavigationContainer>
     );
