@@ -7,7 +7,8 @@ const estilos = StyleSheet.create(
       flex: 1,      
       justifyContent: 'flex-end',           
     },
-
+    
+    
     titulo_principal: {      
       backgroundColor: 'white',     
       alignItems: 'center',
