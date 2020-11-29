@@ -9,6 +9,7 @@ import './entrevista';
 import Entrevista from './entrevista';
 import './discografias';
 import Discografias from './discografias';
+import Resenha from './resenha';
 
 
 const estilos = StyleSheet.create(
@@ -126,7 +127,7 @@ function TelaInicial({ navigation }) {
                 <Text style={estilos.textoBotao}>Entrevistas</Text>          
             </TouchableHighlight>
 
-            <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Contato')}>          
+            <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Resenha')}>          
                 <Text style={estilos.textoBotao}>Resenhas</Text>          
             </TouchableHighlight>
 
@@ -139,7 +140,7 @@ function TelaInicial({ navigation }) {
       
       <ScrollView>      
          
-          <TouchableOpacity onPress={() => navigation.navigate('Contato')}>             
+          <TouchableOpacity onPress={() => navigation.navigate('Entrevista')}>             
             <Text style={estilos.titulo}> Última entrevista  </Text>
          
             <Image 
@@ -158,7 +159,7 @@ function TelaInicial({ navigation }) {
               }}
             />
 
-          <TouchableOpacity onPress={() => navigation.navigate('Contato')}>             
+          <TouchableOpacity onPress={() => navigation.navigate('Resenha')}>             
             <Text style={estilos.titulo}> Resenha em destaque  </Text>
          
             <Image 
@@ -216,6 +217,8 @@ function TelaInicial({ navigation }) {
           <Stack.Screen name="Entrevista" component={Entrevista} />
 
           <Stack.Screen name="Discografias" component={Discografias} />
+          
+          <Stack.Screen name="Resenha" component={Resenha} />
         </Stack.Navigator>
       </NavigationContainer>
     );
