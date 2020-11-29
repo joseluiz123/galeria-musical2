@@ -178,14 +178,14 @@ function TelaInicial({ navigation }) {
           />  
 
           <TouchableOpacity onPress={() => navigation.navigate('Contato')}>             
-            <Text style={estilos.titulo}> Resenha em destaque  </Text>
+            <Text style={estilos.titulo}> Discografia em destaque  </Text>
          
-            <Image 
+              <Image 
                 style={estilos.imagem}
-                source={require('./imagens/acdc.jpg')}                    
+                source={require('./imagens/legiao_urbana.jpg')}                    
                 
               />
-            <Text style={estilos.subtitulo}> Resenha sobre o ACDC </Text>
+            <Text style={estilos.subtitulo}> Discografia do Legião Urbana </Text>
           </TouchableOpacity>
                     
                             

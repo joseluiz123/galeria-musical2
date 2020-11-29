@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, TouchableHighlight } from 'react-native';
 
-const styles = StyleSheet.create({
+const estilos = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#fff',
@@ -31,29 +31,38 @@ const styles = StyleSheet.create({
     },
   
     discography: {
+      marginTop: 5, 
+      flex: 3, 
       flexDirection: 'row',
-      marginTop: 10
+      alignItems: 'stretch',
+      padding: 10
+
     },
   
     images: {
       width: 100,
       height: 100,
-      borderRadius: 50
+      borderRadius: 50,
     },
   
     infoArtists: {
-      marginLeft: 10
+      marginTop: 10,
+      marginLeft: 10,
+      flex: 2,
+      justifyContent:'flex-start',
+      alignItems: 'flex-start',
+
     },
     
     artistName: {
       textTransform: 'uppercase',
       color: 'green',
       fontWeight: 'bold',
-      fontSize: 20
+      fontSize: 18
     },
   
     textInfos: {
-      fontSize: 20
+      fontSize: 16
     },
   
     menu: {
@@ -68,13 +77,39 @@ const styles = StyleSheet.create({
       padding: 15,
       color: '#fff'
     },
+
+    logo:{
+      width: 300,
+      height: 60,
+    },
+
+    titulo_principal: {      
+      backgroundColor: 'white',     
+      alignItems: 'center',
+      alignContent: 'center',
+    },
+
+    rodape: {
+      height: 35,
+      backgroundColor: 'black',     
+      alignItems: 'center',
+      alignContent: 'center',
+    },
+
+    textoRodape: {
+      color: 'white',
+      fontSize: 14,
+      fontWeight: 'bold',
+      alignSelf: 'center',
+      paddingTop: 8,
+    },
   
   });
 
 const Discografias = ({ navigation }) => { 
 
   return (
-      <View style={styles.container}>
+      <View style={estilos.container}>
         <View style={estilos.titulo_principal}>    
           <Image 
             style={estilos.logo}
@@ -91,157 +126,166 @@ const Discografias = ({ navigation }) => {
           }}
         /> 
 
+        <View style={estilos.menu}>  
+            <TouchableHighlight underlayColor="orange"  onPress={() => navigation.popToTop()}> 
+              <Text style={estilos.textButtons}>Início</Text>          
+            </TouchableHighlight>
 
-        <View style={styles.menu}>  
-        <TouchableHighlight underlayColor="orange" >            
-            <Text style={styles.textButtons}>Lançamentos</Text>                      
-        </TouchableHighlight>
+            <TouchableHighlight underlayColor="orange" onPress={() => navigation.popToTop()}>            
+                <Text style={estilos.textButtons}>Lançamentos</Text>                      
+            </TouchableHighlight>
 
-          <TouchableHighlight underlayColor="orange" >        
-              <Text style={styles.textButtons}>Entrevistas</Text>          
-          </TouchableHighlight>
+            <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Entrevista')}>        
+                <Text style={estilos.textButtons}>Entrevistas</Text>          
+            </TouchableHighlight>
 
-          <TouchableHighlight underlayColor="orange" >          
-              <Text style={styles.textButtons}>Resenhas</Text>          
-          </TouchableHighlight>
-
-          <TouchableHighlight underlayColor="orange" >          
-              <Text style={styles.textButtons}>Contato</Text>          
-          </TouchableHighlight>
+            <TouchableHighlight underlayColor="orange" onPress={() => navigation.popToTop()}>          
+                <Text style={estilos.textButtons}>Resenhas</Text>          
+            </TouchableHighlight>
         </View>   
 
         <ScrollView>
 
-          <View style={styles.content}>
+          <View style={estilos.content}>
             
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/antonio-marcos.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Antônio Marcos</Text>
-                <Text style={styles.textInfos}>Ano: 1960</Text>
-                <Text style={styles.textInfos}>Álbuns comentados: 15</Text>
+            <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/antonio-marcos.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Antônio Marcos</Text>
+                <Text style={estilos.textInfos}>Ano: 1960</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 15</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/autoramas.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Autoramas</Text>
-                <Text style={styles.textInfos}>Ano: 1997</Text>
-                <Text style={styles.textInfos}>Álbuns comentados: 7</Text>
+            <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/autoramas.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Autoramas</Text>
+                <Text style={estilos.textInfos}>Ano: 1997</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 7</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/baraov.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Barão Vermelho</Text>
-                <Text style={styles.textInfos}>Ano: 1981</Text>
-                <Text style={styles.textInfos}>Álbuns comentados: 19</Text>
+            <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/baraov.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Barão Vermelho</Text>
+                <Text style={estilos.textInfos}>Ano: 1981</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 19</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/bluesetilicos.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Blues Etílicos</Text>
-                <Text style={styles.textInfos}>Ano: 1985</Text>
-                <Text style={styles.textInfos}>Álbuns Comentados: 14</Text>
+            <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/bluesetilicos.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Blues Etílicos</Text>
+                <Text style={estilos.textInfos}>Ano: 1985</Text>
+                <Text style={estilos.textInfos}>Álbuns Comentados: 14</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/cachorrogrande.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Cachorro Grande</Text>
-                <Text style={styles.textInfos}>Ano: 1999</Text>
-                <Text style={styles.textInfos}>Albuns Comentados: 9</Text>
+            <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/cachorrogrande.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Cachorro Grande</Text>
+                <Text style={estilos.textInfos}>Ano: 1999</Text>
+                <Text style={estilos.textInfos}>Albuns Comentados: 9</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/cassiaeller.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Cássia Eller</Text>
-                <Text style={styles.textInfos}>Ano: 1981</Text>
-                <Text style={styles.textInfos}>Álbuns comentados: 17</Text>
+            <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/cassiaeller.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Cássia Eller</Text>
+                <Text style={estilos.textInfos}>Ano: 1981</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 17</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/cerebro.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Cérebro Eletrônico</Text>
-                <Text style={styles.textInfos}>Ano: 2002</Text>
-                <Text style={styles.textInfos}>Álbuns comentados: 4</Text>
+            <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/cerebro.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Cérebro Eletrônico</Text>
+                <Text style={estilos.textInfos}>Ano: 2002</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 4</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/chorao.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Charlie Brown JR.</Text>
-                <Text style={styles.textInfos}>Ano: 1992</Text>
-                <Text style={styles.textInfos}>Álbuns comentados: 14</Text>
+            <View style={{flex: 3, flexDirection: 'row', alignItems: 'stretch', padding: 10}}>
+              <View style={{flex: 1, justifyContent:'flex-start', alignItems: 'flex-start'}}>
+                <Image style={estilos.images} source={require('./imagens/chorao.jpg')} />
+              </View>
+              <View style={{flex: 2, justifyContent:'flex-start', alignItems: 'flex-start'}}>
+                <Text style={estilos.artistName}>Charlie Brown JR.</Text>
+                <Text style={estilos.textInfos}>Ano: 1992</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 14</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/enghaw.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Engenheiros do Hawaii</Text>
-                <Text style={styles.textInfos}>Ano: 1985</Text>
-                <Text style={styles.textInfos}>Álbuns comentados: 19</Text>
+            <View style={{flex: 3, flexDirection: 'row', alignItems: 'stretch', padding: 10}}>
+              <View style={{flex: 1, justifyContent:'flex-start', alignItems: 'flex-start'}}>
+                <Image style={estilos.images} source={require('./imagens/enghaw.jpg')} />
+
+              </View>
+              
+              <View style={{flex: 2, justifyContent:'flex-start', alignItems: 'flex-start'}}>
+                <Text style={estilos.artistName}>Engenheiros do Hawaii</Text>
+                <Text style={estilos.textInfos}>Ano: 1985</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 19</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/golpedeestado.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Golpe de Estado</Text>
-                <Text style={styles.textInfos}>Ano: 1985</Text>
-                <Text style={styles.textInfos}>Álbuns comentados: 8</Text>
+            <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/golpedeestado.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Golpe de Estado</Text>
+                <Text style={estilos.textInfos}>Ano: 1985</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 8</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/miniira.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Ira!</Text>
-                <Text style={styles.textInfos}>Ano: 1981</Text>
-                <Text style={styles.textInfos}>Álbuns comentados: 15</Text>
+            <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/miniira.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Ira!</Text>
+                <Text style={estilos.textInfos}>Ano: 1981</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 15</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/legiao_urbana_mini.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Legião Hurbana</Text>
-                <Text style={styles.textInfos}>Ano: 1982</Text>
-                <Text style={styles.textInfos}>Álbuns comentados: 15</Text>
+            <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/legiao_urbana_mini.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Legião Hurbana</Text>
+                <Text style={estilos.textInfos}>Ano: 1982</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 15</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/loborges.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Lô Borges</Text>
-                <Text style={styles.textInfos}>Ano: 1972</Text>
-                <Text style={styles.textInfos}>Álbuns comentados: 14</Text>
+            <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/loborges.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Lô Borges</Text>
+                <Text style={estilos.textInfos}>Ano: 1972</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 14</Text>
               </View>
             </View>
 
-            <View style={styles.discography}>
-              <Image style={styles.images} source={require('./imagens/los-porongas.jpg')} />
-              <View style={styles.infoArtists}>
-                <Text style={styles.artistName}>Los Porongas</Text>
-                <Text style={styles.textInfos}>Ano: 2003</Text>
-                <Text style={styles.textInfos}>Álbuns comentados: 2</Text>
+            <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/los-porongas.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Los Porongas</Text>
+                <Text style={estilos.textInfos}>Ano: 2003</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 2</Text>
               </View>
             </View>
           </View>
         </ScrollView>
-        
+
+         <View style={estilos.rodape}>    
+            <Text style={estilos.textoRodape}>&copy; 2020 Galeria Musical</Text>
+          </View>  
+
       </View>
     );
   
