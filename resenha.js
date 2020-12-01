@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, ScrollView, Button, StyleSheet, Text, TextInput, TouchableHighlight, TouchableOpacity, Image } from 'react-native';
-import { Feather as Icon, FontAwesome } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 
 const estilos = StyleSheet.create(
@@ -30,7 +30,6 @@ const estilos = StyleSheet.create(
       backgroundColor: 'black',     
       alignItems: 'center',
       alignContent: 'center',
-      marginTop: 20,
     },
 
     textoRodape: {
@@ -150,8 +149,8 @@ const Resenha = ({ navigation }) => {
                 <Text style={estilos.textoBotao}>Discografias</Text>                      
             </TouchableHighlight>
 
-            <TouchableHighlight underlayColor="orange" onPress={() => navigation.popToTop()}>        
-                <Text style={estilos.textoBotao}>Resenhas</Text>          
+            <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Entrevista')}>        
+                <Text style={estilos.textoBotao}>Entrevistas</Text>          
             </TouchableHighlight>
 
             <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Contato')}>          
@@ -313,11 +312,11 @@ const Resenha = ({ navigation }) => {
             </View>
           </View>
 
+          </ScrollView>
+
           <View style={estilos.rodape}>    
             <Text style={estilos.textoRodape}>&copy; 2020 Galeria Musical</Text>
           </View>          
-
-          </ScrollView>
 
         </View>   
     );
