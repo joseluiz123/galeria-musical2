@@ -129,18 +129,18 @@ const Discografias = ({ navigation }) => {
         <View style={estilos.menu}>  
             <TouchableHighlight underlayColor="orange"  onPress={() => navigation.popToTop()}> 
               <Text style={estilos.textButtons}>Início</Text>          
-            </TouchableHighlight>
-
-            <TouchableHighlight underlayColor="orange" onPress={() => navigation.popToTop()}>            
-                <Text style={estilos.textButtons}>Lançamentos</Text>                      
-            </TouchableHighlight>
+            </TouchableHighlight>         
 
             <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Entrevista')}>        
                 <Text style={estilos.textButtons}>Entrevistas</Text>          
             </TouchableHighlight>
 
-            <TouchableHighlight underlayColor="orange" onPress={() => navigation.popToTop()}>          
+            <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Resenha')}>          
                 <Text style={estilos.textButtons}>Resenhas</Text>          
+            </TouchableHighlight>
+
+            <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Contato')}>            
+                <Text style={estilos.textButtons}>Contato</Text>                      
             </TouchableHighlight>
         </View>   
 
