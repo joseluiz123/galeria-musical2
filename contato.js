@@ -28,7 +28,7 @@ const estilos = StyleSheet.create(
       backgroundColor: 'black',     
       alignItems: 'center',
       alignContent: 'center',
-      marginTop: 20,
+      marginTop: 10,
     },
 
     textoRodape: {
@@ -121,15 +121,15 @@ const Contato = ({ navigation }) => {
                 <Text style={estilos.textoBotao}>Início</Text>          
             </TouchableHighlight>
 
-            <TouchableHighlight underlayColor="orange" onPress={() => navigation.popToTop()}>            
-                <Text style={estilos.textoBotao}>Lançamentos</Text>                      
+            <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Discografias')}>            
+                <Text style={estilos.textoBotao}>Discografias</Text>                      
             </TouchableHighlight>
 
             <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Entrevista')}>        
                 <Text style={estilos.textoBotao}>Entrevistas</Text>          
             </TouchableHighlight>
 
-            <TouchableHighlight underlayColor="orange" onPress={() => navigation.popToTop()}>          
+            <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Resenha')}>          
                 <Text style={estilos.textoBotao}>Resenhas</Text>          
             </TouchableHighlight>
            
@@ -169,12 +169,12 @@ const Contato = ({ navigation }) => {
             title="Enviar"
             onPress={() => alert('Email enviado')} 
           />
-
+       
+          </ScrollView>
+          
           <View style={estilos.rodape}>    
             <Text style={estilos.textoRodape}>&copy; 2020 Galeria Musical</Text>
-          </View>          
-
-          </ScrollView>
+          </View>   
 
         </View>   
     );
