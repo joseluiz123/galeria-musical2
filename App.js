@@ -178,7 +178,7 @@ function TelaInicial({ navigation }) {
             }}
           />  
 
-          <TouchableOpacity onPress={() => navigation.navigate('Contato')}>             
+          <TouchableOpacity onPress={() => navigation.navigate('Discografias')}>             
             <Text style={estilos.titulo}> Discografia em destaque  </Text>
          
               <Image 
