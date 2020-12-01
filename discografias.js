@@ -149,6 +149,15 @@ const Discografias = ({ navigation }) => {
           <View style={estilos.content}>
             
             <View style={estilos.discography}>
+              <Image style={estilos.images} source={require('./imagens/legiao_urbana_mini.jpg')} />
+              <View style={estilos.infoArtists}>
+                <Text style={estilos.artistName}>Legião Hurbana</Text>
+                <Text style={estilos.textInfos}>Ano: 1982</Text>
+                <Text style={estilos.textInfos}>Álbuns comentados: 15</Text>
+              </View>
+            </View>
+
+            <View style={estilos.discography}>
               <Image style={estilos.images} source={require('./imagens/antonio-marcos.jpg')} />
               <View style={estilos.infoArtists}>
                 <Text style={estilos.artistName}>Antônio Marcos</Text>
@@ -252,16 +261,7 @@ const Discografias = ({ navigation }) => {
                 <Text style={estilos.textInfos}>Álbuns comentados: 15</Text>
               </View>
             </View>
-
-            <View style={estilos.discography}>
-              <Image style={estilos.images} source={require('./imagens/legiao_urbana_mini.jpg')} />
-              <View style={estilos.infoArtists}>
-                <Text style={estilos.artistName}>Legião Hurbana</Text>
-                <Text style={estilos.textInfos}>Ano: 1982</Text>
-                <Text style={estilos.textInfos}>Álbuns comentados: 15</Text>
-              </View>
-            </View>
-
+            
             <View style={estilos.discography}>
               <Image style={estilos.images} source={require('./imagens/loborges.jpg')} />
               <View style={estilos.infoArtists}>
