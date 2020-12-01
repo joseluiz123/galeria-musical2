@@ -29,7 +29,6 @@ const estilos = StyleSheet.create(
       backgroundColor: 'black',     
       alignItems: 'center',
       alignContent: 'center',
-      marginTop: 20,
     },
 
     textoRodape: {
@@ -159,7 +158,7 @@ const Entrevista = ({ navigation }) => {
                 <Text style={estilos.textoBotao}>Discografias</Text>                      
             </TouchableHighlight>
 
-            <TouchableHighlight underlayColor="orange" onPress={() => navigation.popToTop()}>        
+            <TouchableHighlight underlayColor="orange" onPress={() => navigation.navigate('Resenha')}>        
                 <Text style={estilos.textoBotao}>Resenhas</Text>          
             </TouchableHighlight>
 
@@ -200,13 +199,13 @@ const Entrevista = ({ navigation }) => {
               <Text style={estilos.descricao}>Da Redação Elas se lançaram por nada mais nada menos que um CD cantando Caetano Veloso e hoje já somam...</Text>
             </View>
 
-          </View>
+          </View>             
+
+          </ScrollView>
 
           <View style={estilos.rodape}>    
             <Text style={estilos.textoRodape}>&copy; 2020 Galeria Musical</Text>
-          </View>          
-
-          </ScrollView>
+          </View>        
 
         </View>   
     );
