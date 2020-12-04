@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "galeria-musical",
+    "name": "Galeria Musical",
     "slug": "galeria-musical",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./imagens/Logo_icone.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#518969"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.galeriamusical.galeriamusical"
     },
     "web": {
       "favicon": "./assets/favicon.png"
